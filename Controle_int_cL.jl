@@ -50,11 +50,11 @@ using Dates
 
     h=6*λ
     w₀ = 2.5*λ
-    Distancia_do_sistema = 0
+    Distancia_do_sistema = 300*λ
     # Distancia_do_sistema = h+(2*λ)
 
     Radius=3*λ
-    fator_r = 300*λ
+    fator_r = 0
     # fator_r = h+(2*λ)
     # fator_r = -(Radius/2)
 
