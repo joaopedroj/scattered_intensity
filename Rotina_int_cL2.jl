@@ -66,7 +66,7 @@ function Rotina_int_cL2(
 
     end
 
-    return intensidade
+    return Intensidade
 
 end
 
