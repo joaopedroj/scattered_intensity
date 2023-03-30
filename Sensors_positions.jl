@@ -23,9 +23,9 @@ function get_tela(N_sensores::Integer, Angulo_de_variação_inicial_1::Integer, 
         angulos_por_cota = Posição_Angular[findall( (Posição_Angular.>=(i-1)*360).*(Posição_Angular.<=i*360))]
         sensores_na_cota = size(findall( (Posição_Angular.>=(i-1)*360).*(Posição_Angular.<=i*360)),1)
         for j in 1:sensores_na_cota
-            Sensores[j+contador_sensores,1] = (fator_r + Radius)*sind(Angulo_de_variação_inicial_1+i)*cosd(angulos_por_cota[j])
-            Sensores[j+contador_sensores,2] = (fator_r + Radius)*sind(Angulo_de_variação_inicial_1+i)*sind(angulos_por_cota[j])
-            Sensores[j+contador_sensores,3] = ((fator_r + Radius)*cosd(Angulo_de_variação_inicial_1+i))+(Distancia_do_sistema)
+            Sensores[j+contador_sensores,1] = (Distancia_do_sistema + Radius)*sind(Angulo_de_variação_inicial_1+i)*cosd(angulos_por_cota[j])
+            Sensores[j+contador_sensores,2] = (Distancia_do_sistema + Radius)*sind(Angulo_de_variação_inicial_1+i)*sind(angulos_por_cota[j])
+            Sensores[j+contador_sensores,3] = (Distancia_do_sistema + Radius)*cosd(Angulo_de_variação_inicial_1+i))+(fator_r)
         end
         contador_sensores += sensores_na_cota
     end
